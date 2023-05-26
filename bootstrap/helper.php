@@ -160,3 +160,16 @@ if (!function_exists('redis')) {
         return \Illuminate\Support\Facades\Redis::connection($collectionName);
     }
 }
+
+if (!function_exists('system_out_print')) {
+    /**
+     * 控制台输出数据.
+     *
+     * @author litongzhi 2023/05/17 17:29
+     */
+    function system_out_print($value)
+    {
+        $clos = fopen('php://stdout', 'a');
+        return fwrite($clos, $value . PHP_EOL);
+    }
+}
