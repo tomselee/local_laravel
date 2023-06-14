@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use App\Common\Tools\Bloom\BloomRedis;
+use voku\helper\HtmlDomParser;
 
 class BloomTest extends TestCase
 {
